@@ -1,0 +1,14 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  // Disable default asdf elixir update
+  "ignoreDeps": ["elixir"],
+  "regexManagers": [
+    {
+      "fileMatch": ["\\.tool-versions$"],
+      "matchStrings": ["(^|\\n)elixir (?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+)(-otp-(?<otpmajor>\\d+))?\\s?(#os:\\s?(?<os>\\w+)\\s?version:\\s?(?<osversion>[\\w\\d\\-\\.]+))?"],
+      "depNameTemplate": "hexpm/elixir",
+      "datasourceTemplate": "docker",
+      "extractVersionTemplate": "^(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+)-erlang-(?<otpmajor>\\d+)(\\.(?<otpminor>\\d+)(\\.(?<otppatch>\\d+))?)?-(?<os>\\w+)\\-(?<osversion>[\\w\\d\\-\\.]+)$"
+    }
+  ]
+}

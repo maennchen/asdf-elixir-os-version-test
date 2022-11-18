@@ -1,3 +1,2 @@
-elixir 1.14.1-otp-25 #os: debian version: buster-20220801-slim
-elixir 1.14.1#os:debian version:buster-20220801-slim
 elixir 1.14.1
+#elixir-os: debian-bullseye 20220801 slim
